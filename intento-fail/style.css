@@ -1,0 +1,72 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: whitesmoke;
+    padding: 30px;
+}
+
+nav {
+    position: relative;
+    list-style: none;
+    float: right;
+    top: -20px;
+}
+
+li {
+    display: inline-block;
+    color: black;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 15px;
+    padding: 10px;
+    font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    letter-spacing: 1px;
+}
+
+li:hover {
+    background-color: wheat;
+}
+
+.menu {
+    display: none;
+}
+
+
+/*media change*/
+
+@media screen and (max-width: 500px) {
+    ul {
+        float: right;
+        height: 300px;
+        width: 200px;
+    }
+    /* menu desplegable */
+    li {
+        /*display: none;*/
+        position: relative;
+        background: #eee;
+        width: 150px
+    }
+    /* enlaces de los items del menu desplegable */
+    .desplegable {
+        line-height: 200%;
+        padding: 10px 15px;
+    }
+    /* items del menu desplegable */
+    .menu {
+        display: inline-block;
+        position: relative;
+        top: 0px;
+        padding: 10px 20px;
+        cursor: pointer;
+    }
+    /* items del menu desplegable al pasar el ratón */
+    .menu:hover>.desplegable {
+        display: none;
+        background-color: teal;
+    }
+}
